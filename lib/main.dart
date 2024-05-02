@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:hbriderapp/pages/HomePageMain.dart';
+import 'package:hbriderapp/pages/bottomnavbar.dart';
 
 void main() {
   runApp(const MyApp());
@@ -30,7 +31,12 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Center(
-      child: HomePageMain(),
+      child: Column(
+        children: [
+          HomePageMain(),
+          BottomNav(),
+        ],
+      ),
       ),
     );
   }
