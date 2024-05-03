@@ -256,7 +256,10 @@ class _OrdersCardState extends State<OrdersCard> {
                   margin: EdgeInsets.symmetric(horizontal: 10),
                   child:   ElevatedButton(
                     onPressed: () {
+                      final orderModel = context.read<OrdersProvider>();
+                      print(orderModel.getOrderByKey(widget.id));
                       Navigator.push(context, MaterialPageRoute(builder:(context)=> OrderAcceptedPage(
+                        order : orderModel.getOrderByKey(widget.id)
 
                       )));
                     },

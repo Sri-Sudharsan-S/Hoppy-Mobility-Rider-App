@@ -44,6 +44,10 @@ class OrdersProvider extends ChangeNotifier{
         orders.removeWhere((order) => order['key'] == key);
     }
 
+    Map<String, dynamic> getOrderByKey(key) {
+        return orders.firstWhere((order) => order["key"] == key);
+    }
+
 
 }
 

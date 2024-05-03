@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:hbriderapp/models/orderspage.model.dart';
 import 'package:hbriderapp/pages/HomePageMain.dart';
 import 'package:hbriderapp/pages/bottomnavbar.dart';
+import 'package:hbriderapp/pages/orderacceptedpage.dart';
 import 'package:hbriderapp/pages/orderspage.dart';
 import 'package:provider/provider.dart';
 
@@ -20,7 +21,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: OrdersMainPage(),
+      home: MyHomePage(),
     );
   }
 }
