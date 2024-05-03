@@ -30,10 +30,10 @@ class _BottomNavState extends State<BottomNav> {
       // Scaffold(
       // bottomNavigationBar:
       CurvedNavigationBar(
-        buttonBackgroundColor:  Color.fromRGBO(250,250 ,250 ,1),
+        buttonBackgroundColor:Colors.green,
           height: 65,
           backgroundColor: Colors.white,
-          color: Color.fromRGBO(240,240 ,240 ,1),
+          color: Colors.green,
           animationDuration: const Duration(milliseconds: 500),
           onTap: (int index) {
             setState(() {
@@ -47,7 +47,7 @@ class _BottomNavState extends State<BottomNav> {
               },
               child: const Icon(
                 Icons.home_outlined,
-                color: Colors.green,
+                color: Colors.white,
               ),
             ),
             InkWell(
@@ -60,16 +60,16 @@ class _BottomNavState extends State<BottomNav> {
               child: FaIcon(
                 FontAwesomeIcons.motorcycle,
                 size: 20,
-                color: Colors.green,
+                color: Colors.white,
               ),
             ),
             const Icon(
               Icons.wallet_outlined,
-              color: Colors.green,
+              color: Colors.white,
             ),
             const Icon(
               Icons.person_outline,
-              color: Colors.green,
+              color: Colors.white,
             )
           ]);
     // ,

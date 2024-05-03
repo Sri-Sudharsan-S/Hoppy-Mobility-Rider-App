@@ -251,7 +251,7 @@ class _HomePageMainState extends State<HomePageMain> {
               Container(
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(5),
-                  color: Colors.green,
+                  color: Colors.redAccent,
                 ),
                 margin: EdgeInsets.only(bottom: 5, left: 5, right: 5),
                 height: 100,

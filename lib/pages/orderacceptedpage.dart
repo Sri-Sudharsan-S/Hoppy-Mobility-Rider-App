@@ -37,6 +37,13 @@ class _OrderAcceptedPageState extends State<OrderAcceptedPage> {
           child: Container(
               child: Stack(
                 children: [
+                  Container(
+                    height: screen.height-100,
+
+                    child: Image.asset("assets/finalorder/map.png" ,fit: BoxFit.fill,),
+                  ),
+                  
+                  
                   Positioned(
                     bottom: 0,
                     child: Container(
@@ -197,7 +204,7 @@ class _OrderAcceptedPageState extends State<OrderAcceptedPage> {
 
                                                   Container(
                                                     width : screen.width< 400 ? screen.width * 0.4 : 100 ,
-                                                    child: Text(widget.order["distance"].toString(),
+                                                    child: Text(widget.order["distance"].toString()+ " km",
                                                       textAlign: TextAlign.end,
                                                       style: TextStyle(
                                                           fontSize: 12,
@@ -231,7 +238,7 @@ class _OrderAcceptedPageState extends State<OrderAcceptedPage> {
 
                                                   Container(
                                                     width : screen.width< 400 ? screen.width * 0.4 : 100 ,
-                                                    child: Text(widget.order["fare"].toString(),
+                                                    child: Text("₹ "+widget.order["fare"].toString(),
                                                       textAlign: TextAlign.end,
                                                       style: TextStyle(
                                                           fontSize: 12,
