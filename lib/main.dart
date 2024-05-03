@@ -1,9 +1,15 @@
 import 'package:flutter/material.dart';
+import 'package:hbriderapp/models/orderspage.model.dart';
 import 'package:hbriderapp/pages/HomePageMain.dart';
 import 'package:hbriderapp/pages/bottomnavbar.dart';
+import 'package:hbriderapp/pages/orderspage.dart';
+import 'package:provider/provider.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(ChangeNotifierProvider(
+    create: (context) => OrdersProvider(),
+    child: const MyApp(),
+  ));
 }
 
 class MyApp extends StatelessWidget {
@@ -14,7 +20,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: const MyHomePage(),
+      home: OrdersMainPage(),
     );
   }
 }
@@ -31,12 +37,12 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Center(
-      child: Column(
-        children: [
-          HomePageMain(),
-          BottomNav(),
-        ],
-      ),
+        child: Column(
+          children: [
+            HomePageMain(),
+            BottomNav(),
+          ],
+        ),
       ),
     );
   }

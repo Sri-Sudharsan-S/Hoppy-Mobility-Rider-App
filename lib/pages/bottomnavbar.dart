@@ -1,5 +1,7 @@
 import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:hbriderapp/pages/orderspage.dart';
 
 class BottomNav extends StatefulWidget {
   const BottomNav({super.key});
@@ -48,9 +50,18 @@ class _BottomNavState extends State<BottomNav> {
                 color: Colors.green,
               ),
             ),
-            const Icon(
-              Icons.shopping_bag_outlined,
-              color: Colors.green,
+            InkWell(
+              onTap: (){
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => OrdersMainPage()),
+                );
+              },
+              child: FaIcon(
+                FontAwesomeIcons.motorcycle,
+                size: 20,
+                color: Colors.green,
+              ),
             ),
             const Icon(
               Icons.wallet_outlined,
